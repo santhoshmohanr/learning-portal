@@ -1,0 +1,10 @@
+title: Learning Portal
+theme: just-the-docs
+
+# Enable the navigation sidebar
+just_the_docs:
+  logo: "Learning Portal"
+  search_enabled: true
+
+# Set baseurl if using in subdir
+baseurl: ""
