@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+}
+header {
+  background: #1f2937;
+  color: white;
+  padding: 1rem 0;
+}
+header h1 {
+  margin: 0;
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  margin-right: 1rem;
+  color: #ddd;
+  text-decoration: none;
+}
+nav a.active,
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.hero .button {
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.topics {
+  list-style: none;
+  padding: 0;
+}
+.topics li {
+  margin-bottom: 0.5rem;
+}
+footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
