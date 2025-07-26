@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palindrome Program - Logical Programs - My Learning Portal</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>📘 My Learning Portal</h1>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="golang.html">Golang</a></li>
+
+          <li class="has-submenu">
+            <a href="#">Topics</a>
+            <ul class="submenu">
+              <li><a href="golang.html">🚀 Golang</a></li>
+              <li><a href="#">☸️ Kubernetes</a></li>
+              <li><a href="#">☁️ AWS</a></li>
+              <li><a href="#">⚙️ DevOps</a></li>
+
+              <li class="has-submenu">
+                <a href="#">🧠 Logical Programs</a>
+                <ul class="submenu">
+                  <li><a href="palindrome.html" class="active">🔁 Palindrome</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>🔁 Palindrome Program in Golang (Using ASCII Comparison)</h2>
+
+    <section>
+      <h3>🧠 Problem Statement</h3>
+      <p>Write a program to check whether a given string is a palindrome using ASCII-based character comparison.</p>
+    </section>
+
+    <section>
+      <h3>📚 What is ASCII?</h3>
+      <p>ASCII (American Standard Code for Information Interchange) assigns a numeric value to each character. In Go, a <code>string</code> is a sequence of bytes (i.e., ASCII values for basic Latin letters).</p>
+      <p>By comparing characters using <code>str[i] != str[len(str)-i-1]</code>, we are checking their ASCII values directly.</p>
+    </section>
+
+    <section>
+      <h3>📄 Go Code</h3>
+      <pre><code>package main
+
+import "fmt"
+
+func main() {
+    str1 := "madam1"
+    fmt.Println("Given String is palindrome? ", isPalindrome(str1))
+}
+
+// isPalindrome checks if the string is a palindrome using ASCII value comparison
+func isPalindrome(str string) bool {
+    if str == "" {
+        return false
+    }
+
+    for i := 0; i &lt; len(str)/2; i++ {
+        if str[i] != str[len(str)-i-1] {
+            return false
+        }
+    }
+
+    return true
+}</code></pre>
+    </section>
+
+    <section>
+      <h3>✅ Output</h3>
+      <pre><code>Given String is palindrome?  false</code></pre>
+      <p>Explanation: <code>"madam1"</code> is not a palindrome because the last character <code>'1'</code> (ASCII 49) does not match <code>'m'</code> (ASCII 109).</p>
+    </section>
+
+    <section>
+      <h3>💡 Try a Valid Palindrome</h3>
+      <p>Replace <code>str1 := "madam1"</code> with <code>str1 := "madam"</code>. The result will be:</p>
+      <pre><code>Given String is palindrome?  true</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 My Learning Portal · Built with 💻 and ☕</p>
+    </div>
+  </footer>
+</body>
+</html>

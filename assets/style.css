@@ -1,57 +1,125 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background-color: #f8f9fa;
   color: #333;
 }
+
 .container {
-  width: 90%;
   max-width: 960px;
   margin: auto;
+  padding: 0 1rem;
 }
+
+/* Header and Navigation */
 header {
-  background: #1f2937;
+  background-color: #004080;
   color: white;
   padding: 1rem 0;
 }
+
 header h1 {
   margin: 0;
+  font-size: 1.8rem;
 }
-nav {
-  margin-top: 0.5rem;
+
+nav ul.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
+
+nav ul li {
+  position: relative;
+}
+
 nav a {
-  margin-right: 1rem;
-  color: #ddd;
-  text-decoration: none;
-}
-nav a.active,
-nav a:hover {
-  color: white;
-  text-decoration: underline;
-}
-.hero {
-  text-align: center;
-  padding: 2rem 0;
-}
-.hero .button {
-  padding: 0.5rem 1rem;
-  background: #3b82f6;
   color: white;
   text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  display: block;
+}
+
+/* Hover */
+nav ul li:hover > a {
+  background-color: #0059b3;
   border-radius: 4px;
 }
-.topics {
+
+/* Submenu */
+.has-submenu > .submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+.submenu li a {
+  color: #004080;
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #e6f0ff;
+  border-radius: 8px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #004080;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Topics Section */
+#topics {
+  margin-top: 3rem;
+}
+
+ul.topics {
   list-style: none;
   padding: 0;
 }
-.topics li {
-  margin-bottom: 0.5rem;
+
+ul.topics li {
+  margin: 0.5rem 0;
 }
+
+ul.topics a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Footer */
 footer {
-  background: #1f2937;
-  color: white;
   text-align: center;
   padding: 1rem 0;
+  background-color: #004080;
+  color: white;
   margin-top: 2rem;
 }

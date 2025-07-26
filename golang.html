@@ -10,9 +10,32 @@
     <div class="container">
       <h1>📘 My Learning Portal</h1>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="golang.html" class="active">Golang</a>
-        <a href="#">Topics</a>
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="golang.html" class="active">Golang</a></li>
+
+          <!-- Topics with submenu -->
+          <li class="has-submenu">
+            <a href="#">Topics</a>
+            <ul class="submenu">
+              <li><a href="golang.html">🚀 Golang</a></li>
+              <li><a href="#">☸️ Kubernetes</a></li>
+              <li><a href="#">☁️ AWS</a></li>
+              <li><a href="#">⚙️ DevOps</a></li>
+
+              <!-- Logical Programs submenu inside Topics -->
+              <li class="has-submenu">
+                <a href="#">🧠 Logical Programs</a>
+                <ul class="submenu">
+                  <li><a href="palindrome.html">🔁 Palindrome</a></li>
+                  <!-- Add more logic programs here -->
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
